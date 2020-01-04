@@ -1,7 +1,11 @@
-@import '_reset.scss';
+@import 'reset';
+@import 'colors';
+@import 'breakpoints';
+@import 'nav';
 
 $var: white;
 
 body {
   background-color: $var;
 }
+

@@ -1,0 +1,13 @@
+nav {
+  ul {
+    display: flex;
+  }
+
+  li {
+    display: inline;
+  }
+
+  @media #{$tablet} {
+    background-color: green;
+  }
+}
