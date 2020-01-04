@@ -2,4 +2,15 @@
 layout: layouts/base.njk
 title: Title Strings
 ---
-<h1>This is global awedata: {{siteData.name}}</h1>
+<h1>This is global data: {{siteData.name}}</h1>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
